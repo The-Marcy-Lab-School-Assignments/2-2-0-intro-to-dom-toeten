@@ -38,6 +38,19 @@ const removeOldInfo = () => {
 };
 
 const makeAlphabet = () => {
+  const list = document.querySelector("#alphabet")
+  let alpha = Number(list.dataset.numLetters);
+  //the number of alpha is not actually a number; its a string! so we have to convert it to a number
+  //console.log(alpha)
+  for (let i = 0; i < alpha; i++) {
+    const newLi = document.createElement("li")
+    const letter = String.fromCharCode(65 + i) 
+    //Need to convert ascii values to actual letters -> 
+    //we can also create an alphabet variable
+    //and set each letter equal to alphabet[i]
+    newLi.textContent = `${letter} is letter #${i+1} in the alphabet`
+    list.append(newLi)
+  }
 };
 
 const makeBio = () => {
