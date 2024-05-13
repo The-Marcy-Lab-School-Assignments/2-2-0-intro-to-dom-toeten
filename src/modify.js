@@ -25,6 +25,11 @@ const modifyDivClassList = () => {
 };
 
 const addH2 = () => {
+ const newH2 = document.createElement("h2")
+  newH2.textContent = "Another one!"
+  newH2.id = "h2-test"
+  document.body.append(newH2)
+  //console.log(newH2)
 };
 
 const removeOldInfo = () => {
