@@ -33,6 +33,8 @@ const addH2 = () => {
 };
 
 const removeOldInfo = () => {
+  const oldie = document.getElementById("old-info")
+  oldie.remove()
 };
 
 const makeAlphabet = () => {
