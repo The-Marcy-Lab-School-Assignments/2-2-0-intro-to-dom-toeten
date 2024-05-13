@@ -18,6 +18,10 @@ const setSubtitleText = () => {
 };
 
 const modifyDivClassList = () => {
+  const div = document.getElementById("modify-classes")
+  const divClass = div.classList
+  divClass.remove("bad-class")
+  divClass.add("new-class")
 };
 
 const addH2 = () => {
