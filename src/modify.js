@@ -1,4 +1,6 @@
 const getMainHeadingText = () => {
+  const mainHeading = document.querySelector("#main-heading")
+  console.log(mainHeading.textContent)
 };
 
 const getAllMainText = () => {
