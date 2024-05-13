@@ -4,6 +4,12 @@ const getMainHeadingText = () => {
 };
 
 const getAllMainText = () => {
+  const mainText = document.querySelectorAll(".main-text")
+  let newString = ""
+  mainText.forEach((element, index) => {
+    newString += `${element.textContent}${index < mainText.length - 1 ? "," : ""}`
+  });
+  console.log(newString)
 };
 
 const setSubtitleText = () => {
