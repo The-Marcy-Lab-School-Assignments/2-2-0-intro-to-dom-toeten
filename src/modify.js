@@ -5,12 +5,14 @@ const getMainHeadingText = () => {
 
 const getAllMainText = () => {
   const mainText = document.querySelectorAll(".main-text")
-  let newString = ""
-  mainText.forEach((element, index) => {
-    newString += `${element.textContent}${index < mainText.length - 1 ? "," : ""}`
+  let arr = []
+  mainText.forEach((element) => {
+    arr.push(element.textContent)
   });
+  let newString = arr.join(",")
   console.log(newString)
 };
+//shoutout kelly for the inspo 
 
 const setSubtitleText = () => {
   const headingTwo = document.getElementById("subtitle")
@@ -40,18 +42,18 @@ const removeOldInfo = () => {
 const makeAlphabet = () => {
   const list = document.querySelector("#alphabet")
   let alpha = Number(list.dataset.numLetters);
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  console.log(typeof alpha)
   for (let i = 0; i < alpha; i++) {
     const newLi = document.createElement("li")
-    const letter = String.fromCharCode(65 + i) 
+    const letter = alphabet[i];
     newLi.textContent = `${letter} is letter #${i+1} in the alphabet`
     list.append(newLi)
   }
 };
-  //the number of alpha is not actually a number; its a string! so we have to convert it to a number
-  //console.log(alpha)
-  //Need to convert ascii values to actual letters -> 
-    //we can also create an alphabet variable
-    //and set each letter equal to alphabet[i]
+
+  //the number of alpha is not actually a number; its a string! 
+  //so we have to convert it to a number
 
 const makeBio = () => {
   const bio = document.getElementById("my-bio").innerHTML = `
