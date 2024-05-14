@@ -43,7 +43,6 @@ const makeAlphabet = () => {
   const list = document.querySelector("#alphabet")
   let alpha = Number(list.dataset.numLetters);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  console.log(typeof alpha)
   for (let i = 0; i < alpha; i++) {
     const newLi = document.createElement("li")
     const letter = alphabet[i];
@@ -52,11 +51,12 @@ const makeAlphabet = () => {
   }
 };
 
-  //the number of alpha is not actually a number; its a string! 
+  //the number of alpha is not actually a number; its a string! -> dataset returns a string
   //so we have to convert it to a number
 
 const makeBio = () => {
-  const bio = document.getElementById("my-bio").innerHTML = `
+  const bio = document.getElementById("my-bio")
+  const changedBio = bio.innerHTML = `
     <h2 id="bio-heading">About Me</h2>
     <p>My name is Zo and I like learn cool new things</p>
     <h3 id="hobby-heading">My Hobbies</h3>
