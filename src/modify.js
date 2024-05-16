@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job getting all test cases to pass! Make sure to build the habit of removing any commented out code that is not needed! */
 const getMainHeadingText = () => {
   const mainHeading = document.querySelector("#main-heading")
   console.log(mainHeading.textContent)
